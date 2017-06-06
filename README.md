@@ -10,3 +10,9 @@ python ser.py
 then open browser with the address http://localhost
 
 upload image or pdf to be converted in plain text.
+
+
+
+reference:
+thanks for mr tshrinivasan
+https://github.com/tshrinivasan/google-ocr-python
