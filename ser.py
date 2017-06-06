@@ -37,7 +37,7 @@ def upload():
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))#
         # Redirect the user to the uploaded_file route, which
         # will basicaly show on the browser the uploaded file
-	os.system("sudo rm -rf "+os.getcwd()+"/uploads/*.txt")#delete old text files
+        os.system("sudo rm -rf "+os.getcwd()+"/uploads/*.txt")#delete old text files
         files = []
         if filename.lower().endswith('.pdf'):
            os.system("convert -density 300 "+os.getcwd()+"/uploads/"+filename+" -quality 100 "+os.getcwd()+"/uploads/output-%03d.jpg")
@@ -74,6 +74,7 @@ def upload():
                     result.write( line )
         return redirect(url_for('uploaded_file',
                                 filename='ocr-result.txt'))
+
 
 # This route is expecting a parameter containing the name
 # of a file. Then it will locate that file on the upload
