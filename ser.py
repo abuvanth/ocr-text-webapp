@@ -38,6 +38,7 @@ def upload():
         # Redirect the user to the uploaded_file route, which
         # will basicaly show on the browser the uploaded file
         os.system("sudo rm -rf "+os.getcwd()+"/uploads/*.txt")#delete old text files
+	os.system("sudo rm -rf "+os.getcwd()+"/uploads/*.jpg")
         files = []
         if filename.lower().endswith('.pdf'):
            os.system("convert -density 300 "+os.getcwd()+"/uploads/"+filename+" -quality 100 "+os.getcwd()+"/uploads/output-%03d.jpg")
