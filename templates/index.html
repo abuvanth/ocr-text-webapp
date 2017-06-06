@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>OCR</title>
+<link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap.min.css') }}"/>
+</head>
+<center>
+<body>
+</br>
+</br>
+<h1 style="color:red">Image,pdf to Text Converter</h1>
+</br>
+</br>
+<form action="upload" enctype="multipart/form-data" method="post">
+<input  type="file" name="file">
+<br>
+<br>
+<input class="btn btn-success" type="submit" value="Convert">
+</form>
+</body>
+</center>
+</html>
